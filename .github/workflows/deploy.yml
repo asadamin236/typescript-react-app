@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
@@ -34,10 +34,9 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
-
-      - name: Fix SPA 404
-        run: cp dist/index.html dist/404.html
+        run: |
+          npm run build
+          cp dist/index.html dist/404.html  # SPA routing fix
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

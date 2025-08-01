@@ -1,9 +1,9 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
+// ⚡ Make sure repo name yaha match kare
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/typescript-react-app/", // must match your GitHub repo name
-});
+  base: '/typescript-react-app/', // Repo name yahi hai
+})
